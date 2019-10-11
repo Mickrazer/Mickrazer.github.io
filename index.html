@@ -20,18 +20,18 @@
                 <h3>Форма регистрации</h3>
                 <fieldset class="form__fieldset">
                     <div class="form__field">
-                        <input class="form__input" type="text" name="name" pattern="^[А-ЯЁ][а-яА-Я-_\.]{1,20}$" placeholder="Имя" required />
+                        <input class="form__input" type="text" name="name" pattern="^([А-ЯЁ][а-яё\.]{1,20})+(-[А-Я][а-яё]{1,20})?$"  placeholder="Имя" required />
                     </div>
                     <div class="form__field">
-                        <input class="form__input" type="email" name="name" pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$" placeholder="E-Mail" />
+                        <input class="form__input" type="email" name="name" pattern="^(([A-z0-9?])+(-[A-z0-9])?)+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,}$" placeholder="E-Mail" />
                         <span class="form__error">e-mail в формате: sega@yandex.ru</span>
                     </div>
                     <div class="form__field">
-                        <input class="form__input" type="tel" name="name" placeholder="Телефон" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" minlength="" maxlength="" />
+                        <input class="form__input" type="tel" name="name" placeholder="Телефон" pattern="^(\+7|8)\s?(\s|\(|-)?\d{3}(\s|\)|-)?\s?\d{3}(\s|-)?\d{2}(\s|-)?\d{2}$" minlength="" maxlength="" />
                         <span class="form__error">телефон в формате: +7 (123) 456-78-90</span>
                     </div>
                     <div class="form__field">
-                        <input class="form__input" type="url" name="name" pattern="(http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?" placeholder="Ваш сайт" />
+                        <input class="form__input" type="url" name="name" pattern="^(https?):\/\/(\w+:?\w*@)?([A-zА-Яа-я]+\.)+[A-zА-Яа-я]{2,}(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?$" placeholder="Ваш сайт" />
                         <span class="form__error">URL в формате: http://mysite.ru</span>
                     </div>
                     <button class="form__button" type="submit">Отправить</button>
